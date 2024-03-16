@@ -7,7 +7,7 @@
 
 :root {
   --color-primary: #191d2b;
-  --color-secondary: #27AE60;
+  --color-secondary: #407ee9;
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -274,7 +274,7 @@ section {
 }
 .about-stats .progress-bars {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
 }
 .about-stats .progress-bars .progress-bar {
@@ -308,11 +308,11 @@ section {
   transition: all 0.4s ease-in-out;
   width: 60%;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .html {
+.about-stats .progress-bars .progress-bar .progress-con .progress .aws {
   width: 80%;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .css {
-  width: 95%;
+.about-stats .progress-bars .progress-bar .progress-con .progress .azure {
+  width: 50%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .js {
   width: 75%;
@@ -345,10 +345,10 @@ section {
   transform: translateX(-50%);
 }
 
-/*Timeline*/
+/*Work Experiance*/
 .timeline {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 2rem;
   padding-bottom: 3rem;
 }
