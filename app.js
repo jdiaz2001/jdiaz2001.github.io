@@ -1,34 +1,39 @@
-(function () {
+document.addEventListener('DOMContentLoaded', function () {
+    // Restore theme from localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+    }
+
     // Handle page navigation control button clicks
-    [...document.querySelectorAll(".control")].forEach(button => {
-        button.addEventListener("click", function() {
-            document.querySelector(".active-btn").classList.remove("active-btn");
-            this.classList.add("active-btn");
-            document.querySelector(".active").classList.remove("active");
-            document.getElementById(button.dataset.id).classList.add("active");
+    const controls = document.querySelectorAll('.control');
+    controls.forEach(function (button) {
+        button.addEventListener('click', function () {
+            const currentActive = document.querySelector('.active-btn');
+            if (currentActive) {
+                currentActive.classList.remove('active-btn');
+            }
+            this.classList.add('active-btn');
+
+            const currentSection = document.querySelector('.active');
+            if (currentSection) {
+                currentSection.classList.remove('active');
+            }
+
+            const target = document.getElementById(button.dataset.id);
+            if (target) {
+                target.classList.add('active');
+            }
         });
     });
 
-    // Toggle light/dark mode
-    document.querySelector(".theme-btn").addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
-    });
-
-    // Function to load content dynamically into specific sections
-    function loadContent(url, target) {
-        fetch(url)
-            .then(response => response.text())
-            .then(data => document.getElementById(target).innerHTML = data)
-            .catch(error => console.error('Error loading content:', error));
+    // Toggle light/dark mode and persist preference
+    const themeBtn = document.querySelector('.theme-btn');
+    if (themeBtn) {
+        themeBtn.addEventListener('click', function () {
+            document.body.classList.toggle('light-mode');
+            const isLight = document.body.classList.contains('light-mode');
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
     }
-
-    // Load content when the page is fully loaded
-    window.onload = function() {
-        // Load separate HTML files for different sections
-        loadContent('header.html', 'header-content');
-        loadContent('about.html', 'about-content');
-        loadContent('portfolio.html', 'portfolio-content');
-        loadContent('blogs.html', 'blogs-content');
-    };
-})();
-
+});

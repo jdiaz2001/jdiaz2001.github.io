@@ -1,0 +1,13 @@
+{
+  "name": "javiercloud",
+  "version": "1.0.0",
+  "description": "Javier Diaz - Cloud Solutions Architect portfolio website",
+  "private": true,
+  "scripts": {
+    "build:css": "sass styles/styles.scss styles/styles.css",
+    "watch:css": "sass --watch styles/styles.scss styles/styles.css"
+  },
+  "devDependencies": {
+    "sass": "1.77.8"
+  }
+}
