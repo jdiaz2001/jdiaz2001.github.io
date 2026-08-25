@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javier Diaz Portafolio</title>
+    <meta name="description" content="Javier Diaz - AWS Certified Cloud Solutions Architect with 7+ years of cloud computing experience across AWS, Azure, and GCP. Specializing in Terraform, Kubernetes, and DevOps.">
+    <meta name="keywords" content="Cloud Architect, AWS, Azure, GCP, Terraform, Kubernetes, DevOps, Systems Administrator">
+    <meta name="author" content="Javier Diaz">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Javier Diaz - Cloud Solutions Architect">
+    <meta property="og:description" content="AWS Certified Cloud Solutions Architect with 7+ years of experience. Specializing in Terraform, Kubernetes, and DevOps across AWS, Azure, and GCP.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/me.jpg">
+
+    <title>Javier Diaz | Cloud Solutions Architect</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/f078870c36.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
@@ -29,25 +38,36 @@
     <div id="blogs-content"></div>
 
     <!-- CONTROLS DIFFERENT PAGES -->
-    <div class="controls">
-        <div class="control active-btn" data-id="home">
-            <i class="fas fa-home"></i>
-        </div>
-        <div class="control" data-id="about">
-            <i class="fas fa-user"></i>
-        </div>
-        <div class="control" data-id="portfolio">
-            <i class="fas fa-briefcase"></i>
-        </div>
-        <div class="control" data-id="blogs">
-            <i class="fa-solid fa-blog"></i>
-        </div>
-    </div>
+    <nav class="controls" aria-label="Page navigation">
+        <button class="control active-btn" data-id="home" aria-label="Home">
+            <i class="fas fa-home" aria-hidden="true"></i>
+        </button>
+        <button class="control" data-id="about" aria-label="About me">
+            <i class="fas fa-user" aria-hidden="true"></i>
+        </button>
+        <button class="control" data-id="portfolio" aria-label="Portfolio">
+            <i class="fas fa-briefcase" aria-hidden="true"></i>
+        </button>
+        <button class="control" data-id="blogs" aria-label="Blogs">
+            <i class="fa-solid fa-blog" aria-hidden="true"></i>
+        </button>
+    </nav>
     
-    <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
-    </div>
+    <button class="theme-btn" aria-label="Toggle light and dark mode">
+        <i class="fas fa-adjust" aria-hidden="true"></i>
+    </button>
     
     <script src="app.js"></script>
+    <noscript>
+        <style>
+            .controls, .theme-btn { display: none; }
+            #header-content, #about-content, #portfolio-content, #blogs-content { display: none; }
+            .noscript-msg { display: block; }
+        </style>
+        <div class="noscript-msg" style="text-align: center; padding: 4rem 2rem; color: #fff; font-family: 'Poppins', sans-serif;">
+            <h1>Javier Diaz - Cloud Solutions Architect</h1>
+            <p style="margin-top: 1rem; line-height: 2rem;">This site requires JavaScript to display content. Please enable JavaScript in your browser to view the full portfolio.</p>
+        </div>
+    </noscript>
 </body>
 </html>

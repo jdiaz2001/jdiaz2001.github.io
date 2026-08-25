@@ -102,6 +102,7 @@ section {
         width: 55px;
         height: 55px;
         border-radius: 50%;
+        border: none;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -134,6 +135,7 @@ section {
     align-items: center;
     box-shadow: 0 3px 15px rgba(0,0,0,.3);
     transition: all .1s ease-in-out;
+    border: none;
     &:active{ transform: translateY(-3px); }
     i{
         font-size: 1.4rem;
@@ -298,12 +300,26 @@ section {
                         transition: all .4s ease-in-out;
                         width: 60%;
                     }
-                    .html { width: 80%; }
-                    .css { width: 95%; }
-                    .js { width: 75%; }
-                    .react{ width: 60%; }
-                    .node{ width: 87%; }
-                    .python{ width: 70%; }
+                    .aws { width: 90%; }
+                    .azure { width: 70%; }
+                    .gcp { width: 60%; }
+                    .vsphere { width: 80%; }
+                    .devops { width: 80%; }
+                    .linux { width: 90%; }
+                    .windows { width: 90%; }
+                    .docker { width: 70%; }
+                    .kubernetes { width: 60%; }
+                    .terraform { width: 70%; }
+                    .cli { width: 80%; }
+                    .python { width: 80%; }
+                    .bash { width: 90%; }
+                    .mysql { width: 80%; }
+                    .security { width: 90%; }
+                    .git { width: 80%; }
+                    .ansible { width: 60%; }
+                    .cicd { width: 50%; }
+                    .agile { width: 50%; }
+                    .api { width: 60%; }
                 }
             }
         }
