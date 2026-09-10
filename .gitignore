@@ -9,10 +9,6 @@ Thumbs.db
 .vscode/
 .idea/
 
-# SCSS compiled output
-styles/styles.css
-styles/styles.css.map
-
 # Node (if using sass CLI via npm)
 node_modules/
 package-lock.json
